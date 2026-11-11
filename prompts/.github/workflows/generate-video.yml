@@ -1,0 +1,12 @@
+name: Samar Jahan Video Generator
+on:
+  push:
+    paths:
+      - 'prompts/*.txt'
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: cat prompts/summer-master-prompt.txt
+      - run: echo "Prompt ready for Claude + Higgsfield MCP. Free credits 10, 1 clip needs 35 credits, so short prompt method used."
